@@ -4,7 +4,6 @@ import folk.sisby.euphonium.EuphoniumClient;
 import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
 import org.jetbrains.annotations.Nullable;
 
@@ -16,7 +15,7 @@ public class SingleSound extends AbstractTickableSoundInstance {
     }
 
     public SingleSound(Player player, SoundEvent sound, float volume, float pitch, @Nullable BlockPos pos) {
-        super(sound, EuphoniumClient.CONFIG.channel, RandomSource.create());
+        super(sound, EuphoniumClient.CONFIG.channel);
 
         this.player = player;
         this.looping = false;

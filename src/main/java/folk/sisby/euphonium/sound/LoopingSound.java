@@ -3,7 +3,6 @@ package folk.sisby.euphonium.sound;
 import folk.sisby.euphonium.EuphoniumClient;
 import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
 
 import java.util.function.Predicate;
@@ -17,7 +16,7 @@ public class LoopingSound extends AbstractTickableSoundInstance {
     public float maxVolume;
 
     public LoopingSound(Player player, SoundEvent sound, float volume, float pitch, Predicate<Player> predicate) {
-        super(sound, EuphoniumClient.CONFIG.channel, RandomSource.create());
+        super(sound, EuphoniumClient.CONFIG.channel);
 
         this.maxVolume = volume;
         this.player = player;

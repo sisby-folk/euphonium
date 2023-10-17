@@ -8,7 +8,6 @@ import folk.sisby.euphonium.sound.LoopedWorldSound;
 import folk.sisby.euphonium.sound.SoundHandler;
 import folk.sisby.euphonium.sound.WorldSound;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.level.biome.Biomes;
 import org.jetbrains.annotations.Nullable;
 
 public class CaveDepth implements ISoundType<WorldSound> {
@@ -26,12 +25,6 @@ public class CaveDepth implements ISoundType<WorldSound> {
             @Override
             public boolean isValidSituationCondition() {
                 var pos = player.blockPosition();
-
-                // Don't play this if the player is in the Deep Dark, the combined sounds are too intense.
-                var key = getBiomeKey(pos);
-                if (key == Biomes.DEEP_DARK) {
-                    return false;
-                }
 
                 if (!EuphoniumWorld.VALID_CAVE_DIMENSIONS.contains(level.dimension().location())) {
                     return false;

@@ -2,25 +2,25 @@ package folk.sisby.euphonium.sounds.biome;
 
 import folk.sisby.euphonium.EuphoniumClient;
 import folk.sisby.euphonium.helper.SoundHelper;
-import net.minecraft.core.Holder;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.tags.BiomeTags;
-import net.minecraft.world.level.biome.Biome;
+import folk.sisby.euphonium.helper.WorldHelper;
 import folk.sisby.euphonium.sound.BiomeSound;
 import folk.sisby.euphonium.sound.ISoundType;
 import folk.sisby.euphonium.sound.SoundHandler;
 import folk.sisby.euphonium.sound.SurfaceBiomeSound;
-import folk.sisby.euphonium.helper.WorldHelper;
-
+import net.fabricmc.fabric.api.tag.convention.v1.ConventionalBiomeTags;
+import net.minecraft.core.Holder;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.biome.Biome;
 import org.jetbrains.annotations.Nullable;
+
 import java.util.function.Predicate;
 
 public class Savanna implements ISoundType<BiomeSound> {
     public static SoundEvent DAY_SOUND;
     public static SoundEvent NIGHT_SOUND;
     public static final Predicate<Holder<Biome>> VALID_BIOME =
-        holder -> holder.is(BiomeTags.IS_SAVANNA);
+        holder -> holder.is(ConventionalBiomeTags.SAVANNA);
 
     public Savanna() {
         DAY_SOUND = SoundHelper.sound(EuphoniumClient.id("biome.savanna.day"));

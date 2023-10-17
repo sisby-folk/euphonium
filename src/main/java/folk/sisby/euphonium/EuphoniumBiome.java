@@ -5,7 +5,6 @@ import folk.sisby.euphonium.sound.ISoundType;
 import folk.sisby.euphonium.sound.SoundHandler;
 import folk.sisby.euphonium.sounds.biome.Badlands;
 import folk.sisby.euphonium.sounds.biome.Beach;
-import folk.sisby.euphonium.sounds.biome.Caves;
 import folk.sisby.euphonium.sounds.biome.Desert;
 import folk.sisby.euphonium.sounds.biome.Forest;
 import folk.sisby.euphonium.sounds.biome.Icy;
@@ -35,7 +34,6 @@ public class EuphoniumBiome {
 	public static List<ResourceLocation> VALID_DIMENSIONS = new ArrayList<>();
 	private static final ISoundType<BiomeSound> BADLANDS = new Badlands();
 	private static final ISoundType<BiomeSound> BEACH = new Beach();
-	private static final ISoundType<BiomeSound> CAVES = new Caves();
 	private static final ISoundType<BiomeSound> DESERT = new Desert();
 	private static final ISoundType<BiomeSound> FOREST = new Forest();
 	private static final ISoundType<BiomeSound> ICY = new Icy();
@@ -94,7 +92,6 @@ public class EuphoniumBiome {
 
 			BADLANDS.addSounds(this);
 			BEACH.addSounds(this);
-			CAVES.addSounds(this);
 			DESERT.addSounds(this);
 			FOREST.addSounds(this);
 			ICY.addSounds(this);
