@@ -3,7 +3,7 @@
   "id": "euphonium",
   "version": "${version}",
   "name": "Euphonium",
-  "description": "Calm ambient sounds suitable for vanilla minecraft - a reproducible fork of Charmonium",
+  "description": "Calm ambient sounds suitable for vanilla minecraft - a reproducible fork of Euphonium",
   "authors": [
     "Sisby folk"
   ],
@@ -17,11 +17,18 @@
   "environment": "*",
   "entrypoints": {
     "client": [
+      "folk.sisby.euphonium.EuphoniumClient"
     ]
   },
   "depends": {
     "fabricloader": ">=0.14.9",
     "minecraft": ">=${mc}",
     "java": ">=17"
-  }
+  },
+  "accessWidener": "euphonium.accesswidener",
+  "jars": [
+    {
+      "file": "META-INF/jars/kaleido-config-${kaleidoConfig}.jar"
+    }
+  ]
 }

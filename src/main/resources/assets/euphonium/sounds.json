@@ -1,0 +1,322 @@
+{
+  "world.cave": {
+    "sounds": [
+      {"name": "euphonium:biomes/cave_wind/cave_wind1"}
+    ]
+  },
+  "world.deep_cave": {
+    "sounds": [
+      {
+        "name": "euphonium:biomes/deep_cave/deep_cave1",
+        "volume": 0.9
+      },
+      {
+        "name": "euphonium:biomes/deep_cave/deep_cave2",
+        "volume": 0.9
+      }
+    ]
+  },
+  "biome.beach.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/beach/beach1"}
+    ]
+  },
+  "biome.beach.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/beach/beach1"}
+    ]
+  },
+  "biome.caves.dripstone": {
+    "sounds": [
+      {"name": "euphonium:biomes/dripstone_caves/dripstone_caves1"}
+    ]
+  },
+  "biome.caves.lush": {
+    "sounds": [
+      {"name": "euphonium:biomes/lush_caves/lush_caves2"}
+    ]
+  },
+  "biome.caves.deep_dark": {
+    "sounds": [
+      {"name": "euphonium:biomes/deep_dark/deep_dark1"}
+    ]
+  },
+  "biome.desert.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/wind/wind1"},
+      {"name": "euphonium:biomes/wind/wind2"},
+      {"name": "euphonium:biomes/wind/wind3"}
+    ]
+  },
+  "biome.desert.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/cicadas/cicadas1"},
+      {"name": "euphonium:biomes/wind/wind2"}
+    ]
+  },
+  "biome.mountains.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/windy_plains/windy_plains1"},
+      {"name": "euphonium:biomes/wind/wind1"},
+      {"name": "euphonium:biomes/wind/wind2"},
+      {"name": "euphonium:biomes/wind/wind3"}
+    ]
+  },
+  "biome.mountains.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/wind/wind1"},
+      {"name": "euphonium:biomes/wind/wind2"},
+      {"name": "euphonium:biomes/wind/wind3"}
+    ]
+  },
+  "biome.forest.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/forest/forest1"},
+      {"name": "euphonium:biomes/forest/forest2"},
+      {"name": "euphonium:biomes/forest/forest3"}
+    ]
+  },
+  "biome.forest.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/crickets/crickets1"},
+      {"name": "euphonium:biomes/crickets/crickets2"}
+    ]
+  },
+  "biome.icy.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/cold_plains/cold_plains1"},
+      {"name": "euphonium:biomes/cold_plains/cold_plains2"},
+      {"name": "euphonium:biomes/wind/wind4"}
+    ]
+  },
+  "biome.icy.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/wind/wind1"},
+      {"name": "euphonium:biomes/wind/wind2"},
+      {"name": "euphonium:biomes/wind/wind3"},
+      {"name": "euphonium:biomes/wind/wind4"},
+      {"name": "euphonium:biomes/cold_plains/cold_plains2"}
+    ]
+  },
+  "biome.jungle.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/lush_forest/lush_forest1"}
+    ]
+  },
+  "biome.jungle.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/crickets/crickets3"},
+      {"name": "euphonium:biomes/cicadas/cicadas3"}
+    ]
+  },
+  "biome.badlands.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/canyon/canyon1"},
+      {"name": "euphonium:biomes/canyon/canyon2"}
+    ]
+  },
+  "biome.badlands.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/crickets/crickets2"},
+      {"name": "euphonium:biomes/crickets/crickets4"}
+    ]
+  },
+  "biome.ocean.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/sea/sea1"},
+      {"name": "euphonium:biomes/sea/sea2"}
+    ]
+  },
+  "biome.ocean.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/sea/sea1"},
+      {"name": "euphonium:biomes/sea/sea2"}
+    ]
+  },
+  "biome.plains.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/plains/plains1"},
+      {"name": "euphonium:biomes/plains/plains2"},
+      {"name": "euphonium:biomes/plains/plains3"}
+    ]
+  },
+  "biome.plains.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/crickets/crickets1"},
+      {"name": "euphonium:biomes/crickets/crickets2"},
+      {"name": "euphonium:biomes/crickets/crickets4"}
+    ]
+  },
+  "biome.river": {
+    "sounds": [
+      {"name": "euphonium:biomes/wind/wind4"},
+      {"name": "euphonium:biomes/cold_plains/cold_plains1"},
+      {"name": "euphonium:biomes/cold_plains/cold_plains2"}
+    ]
+  },
+  "biome.savanna.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/windy_plains/windy_plains1"},
+      {"name": "euphonium:biomes/windy_plains/windy_plains2"},
+      {"name": "euphonium:biomes/cicadas/cicadas3"},
+      {"name": "euphonium:biomes/warm_plains/warm_plains1"},
+      {"name": "euphonium:biomes/warm_plains/warm_plains2"}
+    ]
+  },
+  "biome.savanna.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/crickets/crickets1"},
+      {"name": "euphonium:biomes/crickets/crickets2"},
+      {"name": "euphonium:biomes/crickets/crickets4"},
+      {"name": "euphonium:biomes/cicadas/cicadas1"},
+      {"name": "euphonium:biomes/cicadas/cicadas2"}
+    ]
+  },
+  "biome.swamp.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/swamp/swamp1"}
+    ]
+  },
+  "biome.swamp.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/crickets/crickets3"}
+    ]
+  },
+  "biome.taiga.day": {
+    "sounds": [
+      {"name": "euphonium:biomes/cold_forest/cold_forest1"},
+      {"name": "euphonium:biomes/cold_forest/cold_forest2"},
+      {"name": "euphonium:biomes/mountain_forest/mountain_forest1"}
+    ]
+  },
+  "biome.taiga.night": {
+    "sounds": [
+      {"name": "euphonium:biomes/wind/wind1"},
+      {"name": "euphonium:biomes/wind/wind3"}
+    ]
+  },
+  "biome.the_end": {
+    "sounds": [
+      {"name": "euphonium:biomes/the_end/the_end1"}
+    ]
+  },
+  "world.dry": {
+    "sounds": [
+      {"name": "euphonium:world/cicadas/cicadas1"},
+      {"name": "euphonium:world/cicadas/cicadas2"},
+      {"name": "euphonium:world/cicadas/cicadas3"}
+    ]
+  },
+  "world.bleak": {
+    "sounds": [
+      {"name": "euphonium:world/cold_wind/cold_wind1"},
+      {"name": "euphonium:world/cold_wind/cold_wind2"},
+      {"name": "euphonium:world/crow/crow1"},
+      {"name": "euphonium:world/crow/crow2"},
+      {"name": "euphonium:world/crow/crow3"},
+      {"name": "euphonium:world/crow/crow4"}
+    ]
+  },
+  "world.night_plains": {
+    "sounds": [
+      {"name": "euphonium:world/blackbird/blackbird1"},
+      {"name": "euphonium:world/blackbird/blackbird2"},
+      {"name": "euphonium:world/blackbird/blackbird3"},
+      {"name": "euphonium:world/blackbird/blackbird4"},
+      {"name": "euphonium:world/blackbird/blackbird5"},
+      {"name": "euphonium:world/blackbird/blackbird6"},
+      {"name": "euphonium:world/crickets/crickets1"},
+      {"name": "euphonium:world/crickets/crickets2"}
+    ]
+  },
+  "world.underground_water": {
+    "sounds": [
+      {"name": "euphonium:world/underground_water/underground_water1"},
+      {"name": "euphonium:world/underground_water/underground_water2"},
+      {"name": "euphonium:world/underground_water/underground_water3"}
+    ]
+  },
+  "world.alien": {
+    "sounds": [
+      {"name": "euphonium:world/alien/alien1"},
+      {"name": "euphonium:world/alien/alien2"},
+      {"name": "euphonium:world/alien/alien3"},
+      {"name": "euphonium:world/alien/alien4"},
+      {"name": "euphonium:world/alien/alien5"},
+      {"name": "euphonium:world/alien/alien6"},
+      {"name": "euphonium:world/alien/alien7"},
+      {"name": "euphonium:world/alien/alien8"}
+    ]
+  },
+  "world.mineshaft": {
+    "sounds": [
+      {"name": "euphonium:world/wood_creaking/wood_creaking1"},
+      {"name": "euphonium:world/wood_creaking/wood_creaking2"},
+      {"name": "euphonium:world/wood_creaking/wood_creaking3"},
+      {"name": "euphonium:world/wood_creaking/wood_creaking4"},
+      {"name": "euphonium:world/wood_creaking/wood_creaking5"}
+    ]
+  },
+  "world.mansion": {
+    "sounds": [
+      {"name": "euphonium:world/wood_creaking/wood_creaking1"},
+      {"name": "euphonium:world/wood_creaking/wood_creaking2"},
+      {"name": "euphonium:world/wood_creaking/wood_creaking3"},
+      {"name": "euphonium:world/wood_creaking/wood_creaking4"},
+      {"name": "euphonium:world/wood_creaking/wood_creaking5"}
+    ]
+  },
+  "world.village": {
+    "sounds": [
+      {"name": "euphonium:world/village/village1"},
+      {"name": "euphonium:world/village/village2"},
+      {"name": "euphonium:world/village/village3"},
+      {"name": "euphonium:world/village/village4"},
+      {"name": "euphonium:world/village/village5"},
+      {"name": "euphonium:world/village/village6"},
+      {"name": "euphonium:world/village/village7"},
+      {"name": "euphonium:world/village/village8"},
+      {"name": "euphonium:world/village/village9"},
+      {"name": "euphonium:world/village/village10"},
+      {"name": "euphonium:world/village/village11"},
+      {"name": "euphonium:world/village/village12"}
+    ]
+  },
+  "world.snowstorm": {
+    "sounds": [
+      {"name": "euphonium:world/strong_wind/strong_wind1"},
+      {"name": "euphonium:world/strong_wind/strong_wind2"},
+      {"name": "euphonium:world/strong_wind/strong_wind3"}
+    ]
+  },
+  "world.high": {
+    "sounds": [
+      {"name": "euphonium:world/strong_wind/strong_wind1"},
+      {"name": "euphonium:world/strong_wind/strong_wind2"},
+      {"name": "euphonium:world/strong_wind/strong_wind3"}
+    ]
+  },
+  "world.geode": {
+    "sounds": [
+      {"name": "euphonium:world/geode/geode1"},
+      {"name": "euphonium:world/geode/geode2"},
+      {"name": "euphonium:world/geode/geode3"}
+    ]
+  },
+  "world.gravel": {
+    "sounds": [
+      {"name": "euphonium:world/gravel/gravel1"},
+      {"name": "euphonium:world/gravel/gravel2"},
+      {"name": "euphonium:world/gravel/gravel3"},
+      {"name": "euphonium:world/gravel/gravel4"}
+    ]
+  },
+  "world.deepslate": {
+    "sounds": [
+      {"name": "euphonium:world/deepslate/deepslate1"},
+      {"name": "euphonium:world/deepslate/deepslate2"},
+      {"name": "euphonium:world/deepslate/deepslate3"},
+      {"name": "euphonium:world/deepslate/deepslate4"}
+    ]
+  }
+}

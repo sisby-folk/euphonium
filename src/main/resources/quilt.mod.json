@@ -6,7 +6,7 @@
 		"version": "${version}",
 		"metadata": {
 			"name": "Euphonium",
-			"description": "Calm ambient sounds suitable for vanilla minecraft - a reproducible fork of Charmonium",
+			"description": "Calm ambient sounds suitable for vanilla minecraft - a reproducible fork of Euphonium",
 			"contributors": {
 				"Sisby folk": "Co-Authors"
 			},
@@ -19,6 +19,7 @@
 		},
 		"entrypoints": {
 			"client": [
+				"folk.sisby.euphonium.EuphoniumClient"
 			]
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
@@ -36,5 +37,6 @@
 				"versions": ">=${qfapi}"
 			}
 		]
-	}
+	},
+	"access_widener": "euphonium.accesswidener"
 }
