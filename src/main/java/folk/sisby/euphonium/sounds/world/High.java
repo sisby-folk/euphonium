@@ -1,15 +1,14 @@
  package folk.sisby.euphonium.sounds.world;
 
  import folk.sisby.euphonium.EuphoniumClient;
- import folk.sisby.euphonium.WorldAmbience;
- import net.minecraft.sounds.SoundEvent;
- import net.minecraft.world.level.Level;
- import org.jetbrains.annotations.Nullable;
-  import folk.sisby.euphonium.sound.ISoundType;
+ import folk.sisby.euphonium.helper.WorldHelper;
+ import folk.sisby.euphonium.sound.ISoundType;
  import folk.sisby.euphonium.sound.RepeatedWorldSound;
  import folk.sisby.euphonium.sound.SoundHandler;
  import folk.sisby.euphonium.sound.WorldSound;
- import folk.sisby.euphonium.helper.WorldHelper;
+ import net.minecraft.sounds.SoundEvent;
+ import net.minecraft.world.level.Level;
+ import org.jetbrains.annotations.Nullable;
 
  public class High implements ISoundType<WorldSound> {
      public static SoundEvent SOUND;
@@ -19,7 +18,7 @@
      }
 
      public void addSounds(SoundHandler<WorldSound> handler) {
-         if (!WorldAmbience.CONFIG.high) return;
+         if (!EuphoniumClient.CONFIG.worldAmbience.high) return;
 
          handler.getSounds().add(new RepeatedWorldSound(handler.getPlayer()) {
              @Override

@@ -20,7 +20,6 @@ import folk.sisby.euphonium.sounds.biome.Taiga;
 import folk.sisby.euphonium.sounds.biome.TheEnd;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientEntityEvents;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.resources.ResourceLocation;
@@ -32,7 +31,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BiomeAmbience {
+public class EuphoniumBiome {
 	public static List<ResourceLocation> VALID_DIMENSIONS = new ArrayList<>();
 	private static final ISoundType<BiomeSound> BADLANDS = new Badlands();
 	private static final ISoundType<BiomeSound> BEACH = new Beach();
@@ -52,15 +51,12 @@ public class BiomeAmbience {
 	private static Handler handler;
 
 	@SuppressWarnings("deprecation")
-	public static BiomeAmbienceConfig CONFIG = BiomeAmbienceConfig.createToml(FabricLoader.getInstance().getConfigDir(), EuphoniumClient.ID, "biome",  BiomeAmbienceConfig.class);
-
-	@SuppressWarnings("deprecation")
 	public static void init() {
-		if (CONFIG.enabled) {
-			ClientEntityEvents.ENTITY_LOAD.register(BiomeAmbience::handleClientEntityJoin);
-			ClientEntityEvents.ENTITY_UNLOAD.register(BiomeAmbience::handleClientEntityLeave);
-			ClientTickEvents.END_CLIENT_TICK.register(BiomeAmbience::handleClientTick);
-			CONFIG.dimensions.forEach(dim -> VALID_DIMENSIONS.add(new ResourceLocation(dim)));
+		if (EuphoniumClient.CONFIG.biomeAmbienceEnabled) {
+			ClientEntityEvents.ENTITY_LOAD.register(EuphoniumBiome::handleClientEntityJoin);
+			ClientEntityEvents.ENTITY_UNLOAD.register(EuphoniumBiome::handleClientEntityLeave);
+			ClientTickEvents.END_CLIENT_TICK.register(EuphoniumBiome::handleClientTick);
+			EuphoniumClient.CONFIG.biomeAmbience.dimensions.forEach(dim -> VALID_DIMENSIONS.add(new ResourceLocation(dim)));
 		}
 	}
 

@@ -1,6 +1,6 @@
 package folk.sisby.euphonium.sound;
 
-import folk.sisby.euphonium.WorldAmbience;
+import folk.sisby.euphonium.EuphoniumClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.world.entity.player.Player;
@@ -50,6 +50,6 @@ public abstract class WorldSound implements ISoundInstance {
 
     @Override
     public double getVolumeScaling() {
-        return WorldAmbience.CONFIG.volumeScaling;
+        return EuphoniumClient.CONFIG.worldAmbience.volumeScaling;
     }
 }

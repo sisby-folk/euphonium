@@ -1,14 +1,13 @@
  package folk.sisby.euphonium.sounds.world;
 
  import folk.sisby.euphonium.EuphoniumClient;
- import folk.sisby.euphonium.WorldAmbience;
- import net.minecraft.sounds.SoundEvent;
- import org.jetbrains.annotations.Nullable;
-  import folk.sisby.euphonium.sounds.biome.TheEnd;
  import folk.sisby.euphonium.sound.ISoundType;
  import folk.sisby.euphonium.sound.RepeatedWorldSound;
  import folk.sisby.euphonium.sound.SoundHandler;
  import folk.sisby.euphonium.sound.WorldSound;
+ import folk.sisby.euphonium.sounds.biome.TheEnd;
+ import net.minecraft.sounds.SoundEvent;
+ import org.jetbrains.annotations.Nullable;
 
  public class Alien implements ISoundType<WorldSound> {
     public static SoundEvent SOUND;
@@ -18,7 +17,7 @@
     }
 
     public void addSounds(SoundHandler<WorldSound> handler) {
-        if (!WorldAmbience.CONFIG.alien) return;
+        if (!EuphoniumClient.CONFIG.worldAmbience.alien) return;
 
         handler.getSounds().add(new RepeatedWorldSound(handler.getPlayer()) {
             @Override

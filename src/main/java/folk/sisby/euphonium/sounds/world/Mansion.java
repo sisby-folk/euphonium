@@ -1,7 +1,11 @@
  package folk.sisby.euphonium.sounds.world;
 
  import folk.sisby.euphonium.EuphoniumClient;
- import folk.sisby.euphonium.WorldAmbience;
+ import folk.sisby.euphonium.helper.WorldHelper;
+ import folk.sisby.euphonium.sound.ISoundType;
+ import folk.sisby.euphonium.sound.RepeatedWorldSound;
+ import folk.sisby.euphonium.sound.SoundHandler;
+ import folk.sisby.euphonium.sound.WorldSound;
  import net.minecraft.core.BlockPos;
  import net.minecraft.sounds.SoundEvent;
  import net.minecraft.world.entity.monster.Monster;
@@ -9,11 +13,6 @@
  import net.minecraft.world.level.block.Blocks;
  import net.minecraft.world.phys.AABB;
  import org.jetbrains.annotations.Nullable;
-  import folk.sisby.euphonium.sound.ISoundType;
- import folk.sisby.euphonium.sound.RepeatedWorldSound;
- import folk.sisby.euphonium.sound.SoundHandler;
- import folk.sisby.euphonium.sound.WorldSound;
- import folk.sisby.euphonium.helper.WorldHelper;
 
  import java.util.List;
 
@@ -25,7 +24,7 @@
      }
 
      public void addSounds(SoundHandler<WorldSound> handler) {
-         if (!WorldAmbience.CONFIG.mansion) return;
+         if (!EuphoniumClient.CONFIG.worldAmbience.mansion) return;
 
          handler.getSounds().add(new RepeatedWorldSound(handler.getPlayer()) {
              @Override

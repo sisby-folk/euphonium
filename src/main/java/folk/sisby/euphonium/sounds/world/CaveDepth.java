@@ -1,7 +1,7 @@
 package folk.sisby.euphonium.sounds.world;
 
 import folk.sisby.euphonium.EuphoniumClient;
-import folk.sisby.euphonium.WorldAmbience;
+import folk.sisby.euphonium.EuphoniumWorld;
 import folk.sisby.euphonium.sound.ISoundType;
 import folk.sisby.euphonium.sound.LoopedWorldSound;
 import folk.sisby.euphonium.sound.SoundHandler;
@@ -19,7 +19,7 @@ public class CaveDepth implements ISoundType<WorldSound> {
 
     @Override
     public void addSounds(SoundHandler<WorldSound> handler) {
-        if (!WorldAmbience.CONFIG.caveDepth) return;
+        if (!EuphoniumClient.CONFIG.worldAmbience.caveDepth) return;
 
         handler.getSounds().add(new LoopedWorldSound(handler.getPlayer()) {
             @Override
@@ -32,7 +32,7 @@ public class CaveDepth implements ISoundType<WorldSound> {
                     return false;
                 }
 
-                if (!WorldAmbience.VALID_CAVE_DIMENSIONS.contains(level.dimension().location())) {
+                if (!EuphoniumWorld.VALID_CAVE_DIMENSIONS.contains(level.dimension().location())) {
                     return false;
                 }
 
@@ -40,7 +40,7 @@ public class CaveDepth implements ISoundType<WorldSound> {
                 var bottom = level.getMinBuildHeight() < 0 ? 0 : 32;
                 return !level.canSeeSkyFromBelowWater(pos)
                     && pos.getY() <= bottom
-                    && light < WorldAmbience.CAVE_LIGHT_LEVEL;
+                    && light < EuphoniumClient.CONFIG.worldAmbience.caveLightLevel;
             }
 
             @Override

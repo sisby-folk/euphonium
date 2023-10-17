@@ -17,7 +17,7 @@ public class LoopingSound extends AbstractTickableSoundInstance {
     public float maxVolume;
 
     public LoopingSound(Player player, SoundEvent sound, float volume, float pitch, Predicate<Player> predicate) {
-        super(sound, EuphoniumClient.getAudioChannel(), RandomSource.create());
+        super(sound, EuphoniumClient.CONFIG.channel, RandomSource.create());
 
         this.maxVolume = volume;
         this.player = player;

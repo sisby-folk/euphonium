@@ -16,7 +16,7 @@ public class SingleSound extends AbstractTickableSoundInstance {
     }
 
     public SingleSound(Player player, SoundEvent sound, float volume, float pitch, @Nullable BlockPos pos) {
-        super(sound, EuphoniumClient.getAudioChannel(), RandomSource.create());
+        super(sound, EuphoniumClient.CONFIG.channel, RandomSource.create());
 
         this.player = player;
         this.looping = false;

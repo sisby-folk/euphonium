@@ -20,6 +20,7 @@ group = 'folk.sisby'
 repositories {
 	maven { url "https://maven.terraformersmc.com/" }
 	maven { url 'https://repo.sleeping.town/' }
+	mavenLocal()
 }
 
 dependencies {

@@ -6,9 +6,10 @@
 		"version": "${version}",
 		"metadata": {
 			"name": "Euphonium",
-			"description": "Calm ambient sounds suitable for vanilla minecraft - a reproducible fork of Euphonium",
+			"description": "Ambient sounds suitable for vanilla minecraft",
 			"contributors": {
-				"Sisby folk": "Co-Authors"
+				"svenhjol": "Author",
+				"Sisby folk": "Porting and Maintenance"
 			},
 			"contact": {
 				"homepage": "https://modrinth.com/mod/euphonium",

@@ -1,6 +1,6 @@
 package folk.sisby.euphonium.sound;
 
-import folk.sisby.euphonium.BiomeAmbience;
+import folk.sisby.euphonium.EuphoniumBiome;
 import folk.sisby.euphonium.EuphoniumClient;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -54,7 +54,7 @@ public abstract class BiomeSound implements ISoundInstance {
 
     @Override
     public double getVolumeScaling() {
-        return BiomeAmbience.CONFIG.volumeScaling;
+        return EuphoniumClient.CONFIG.biomeAmbience.volumeScaling;
     }
 
     @Override
@@ -95,12 +95,12 @@ public abstract class BiomeSound implements ISoundInstance {
         if (!player.isAlive()) return false;
         if (!isValidPlayerCondition()) return false;
 
-        if (!BiomeAmbience.VALID_DIMENSIONS.contains(level.dimension().location())) {
+        if (!EuphoniumBiome.VALID_DIMENSIONS.contains(level.dimension().location())) {
             return false;
         }
 
         var pos = player.blockPosition();
-        var blend = (float) BiomeAmbience.CONFIG.biomeBlend;
+        var blend = (float) EuphoniumClient.CONFIG.biomeAmbience.biomeBlend;
 
         if (blend > 0) {
 

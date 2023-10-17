@@ -20,7 +20,6 @@ import folk.sisby.euphonium.sounds.world.UndergroundWater;
 import folk.sisby.euphonium.sounds.world.Village;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientEntityEvents;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.resources.ResourceLocation;
@@ -32,8 +31,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WorldAmbience {
-	public static final int CAVE_LIGHT_LEVEL = 10;
+public class EuphoniumWorld {
 	public static final List<ResourceLocation> VALID_CAVE_DIMENSIONS = new ArrayList<>();
 	private static final ISoundType<WorldSound> ALIEN = new Alien();
 	private static final ISoundType<WorldSound> BLEAK = new Bleak();
@@ -53,15 +51,12 @@ public class WorldAmbience {
 	private static Handler handler;
 
 	@SuppressWarnings("deprecation")
-	public static WorldAmbienceConfig CONFIG = WorldAmbienceConfig.createToml(FabricLoader.getInstance().getConfigDir(), EuphoniumClient.ID, "world",  WorldAmbienceConfig.class);
-
-	@SuppressWarnings("deprecation")
 	public static void init() {
-		if (CONFIG.enabled) {
-			ClientEntityEvents.ENTITY_LOAD.register(WorldAmbience::handleClientEntityJoin);
-			ClientEntityEvents.ENTITY_UNLOAD.register(WorldAmbience::handleClientEntityLeave);
-			ClientTickEvents.END_CLIENT_TICK.register(WorldAmbience::handleClientTick);
-			CONFIG.caveDimensions.forEach(dim -> VALID_CAVE_DIMENSIONS.add(new ResourceLocation(dim)));
+		if (EuphoniumClient.CONFIG.worldAmbienceEnabled) {
+			ClientEntityEvents.ENTITY_LOAD.register(EuphoniumWorld::handleClientEntityJoin);
+			ClientEntityEvents.ENTITY_UNLOAD.register(EuphoniumWorld::handleClientEntityLeave);
+			ClientTickEvents.END_CLIENT_TICK.register(EuphoniumWorld::handleClientTick);
+			EuphoniumClient.CONFIG.worldAmbience.caveDimensions.forEach(dim -> VALID_CAVE_DIMENSIONS.add(new ResourceLocation(dim)));
 		}
 	}
 

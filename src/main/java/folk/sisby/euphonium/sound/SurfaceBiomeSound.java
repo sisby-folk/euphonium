@@ -1,6 +1,6 @@
 package folk.sisby.euphonium.sound;
 
-import folk.sisby.euphonium.BiomeAmbience;
+import folk.sisby.euphonium.EuphoniumClient;
 import folk.sisby.euphonium.helper.WorldHelper;
 import net.minecraft.world.entity.player.Player;
 
@@ -22,7 +22,7 @@ public abstract class SurfaceBiomeSound extends BiomeSound {
 
     @Override
     public double getVolumeScaling() {
-        var cullDistance = BiomeAmbience.CONFIG.cullSoundAboveGround;
+        var cullDistance = EuphoniumClient.CONFIG.biomeAmbience.cullSoundAboveGround;
 
         if (cullDistance > 0) {
             var distanceFromGround = WorldHelper.distanceFromGround(getPlayer(), cullDistance);
