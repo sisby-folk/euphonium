@@ -93,7 +93,6 @@ if (System.getenv("MODRINTH_TOKEN")) {
 		loaders = ['quilt', 'fabric']
 		detectLoaders = false
 		dependencies {
-			optional.project "fabric-seasons"
 		}
 		changelog = "Changelog: https://github.com/sisby-folk/euphonium/releases/tag/v" + baseVersion
 		syncBodyFrom = rootProject.file("README.md").text
