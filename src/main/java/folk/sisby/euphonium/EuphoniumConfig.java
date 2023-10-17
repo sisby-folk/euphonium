@@ -53,17 +53,11 @@ public class EuphoniumConfig extends WrappedConfig {
 		@Comment("Plays ambient sounds in cold and/or barren overworld environments")
 		public final Boolean bleak = true;
 
-		@Comment("Plays ambient sounds when the player is underground and near deepslate blocks")
-		public final Boolean deepslate = true;
-
 		@Comment("Plays ambient sounds in dry and/or hot overworld environments")
 		public final Boolean dry = true;
 
 		@Comment("Plays ambient sounds when high up in the overworld")
 		public final Boolean high = true;
-
-		@Comment("Plays ambient sounds while inside a woodland mansion")
-		public final Boolean mansion = true;
 
 		@Comment("Plays ambient sounds in plains environments at night")
 		public final Boolean nightPlains = true;
@@ -71,8 +65,8 @@ public class EuphoniumConfig extends WrappedConfig {
 		@Comment("Plays ambient sounds when in a cold biome during a thunderstorm")
 		public final Boolean snowstorm = true;
 
-		@Comment("Plays water sounds from a nearby water source when underground")
-		public final Boolean undergroundWater = true;
+		@Comment("Plays ambient sounds while inside a woodland mansion")
+		public final Boolean mansion = true;
 
 		@Comment("Plays ambient sounds when a player is inside a village")
 		public final Boolean village = true;
@@ -83,8 +77,14 @@ public class EuphoniumConfig extends WrappedConfig {
 		@Comment("Plays ambient sounds from a nearby amethyst geode")
 		public final Boolean geode = true;
 
+		@Comment("Plays water sounds from a nearby water source when underground")
+		public final Boolean undergroundWater = true;
+
 		@Comment("Plays ambient sounds when the player is underground and near gravel blocks")
 		public final Boolean gravel = true;
+
+		@Comment("Plays ambient sounds when the player is underground and near deepslate blocks")
+		public final Boolean deepslate = true;
 
 		@Comment("Plays more Intense cave sounds when below Y 0 and light level is lower than 10")
 		public final Boolean caveDepth = true;
