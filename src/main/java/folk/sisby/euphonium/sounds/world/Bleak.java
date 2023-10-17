@@ -1,6 +1,7 @@
  package folk.sisby.euphonium.sounds.world;
 
  import folk.sisby.euphonium.EuphoniumClient;
+ import folk.sisby.euphonium.helper.SoundHelper;
  import folk.sisby.euphonium.helper.WorldHelper;
  import folk.sisby.euphonium.sound.ISoundType;
  import folk.sisby.euphonium.sound.SoundHandler;
@@ -15,7 +16,7 @@
      public static SoundEvent SOUND;
 
      public Bleak() {
-         SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("world.bleak"));
+         SOUND = SoundHelper.sound(EuphoniumClient.id("world.bleak"));
      }
 
      public void addSounds(SoundHandler<WorldSound> handler) {

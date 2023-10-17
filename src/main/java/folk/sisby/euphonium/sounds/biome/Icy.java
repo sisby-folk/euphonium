@@ -1,6 +1,7 @@
 package folk.sisby.euphonium.sounds.biome;
 
 import folk.sisby.euphonium.EuphoniumClient;
+import folk.sisby.euphonium.helper.SoundHelper;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalBiomeTags;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
@@ -23,8 +24,8 @@ public class Icy implements ISoundType<BiomeSound> {
         holder -> holder.is(ConventionalBiomeTags.ICY) || holder.is(ConventionalBiomeTags.SNOWY);
 
     public Icy() {
-        DAY_SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.icy.day"));
-        NIGHT_SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.icy.night"));
+        DAY_SOUND = SoundHelper.sound(EuphoniumClient.id("biome.icy.day"));
+        NIGHT_SOUND = SoundHelper.sound(EuphoniumClient.id("biome.icy.night"));
     }
 
     @Override

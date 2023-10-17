@@ -1,6 +1,7 @@
 package folk.sisby.euphonium.sounds.world;
 
 import folk.sisby.euphonium.EuphoniumClient;
+import folk.sisby.euphonium.helper.SoundHelper;
 import folk.sisby.euphonium.helper.WorldHelper;
 import folk.sisby.euphonium.sound.ISoundType;
 import folk.sisby.euphonium.sound.RepeatedWorldSound;
@@ -18,7 +19,7 @@ public class Gravel implements ISoundType<WorldSound> {
     public static SoundEvent SOUND;
 
     public Gravel() {
-        SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("world.gravel"));
+        SOUND = SoundHelper.sound(EuphoniumClient.id("world.gravel"));
     }
 
     public void addSounds(SoundHandler<WorldSound> handler) {

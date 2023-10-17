@@ -1,6 +1,7 @@
 package folk.sisby.euphonium.sounds.biome;
 
 import folk.sisby.euphonium.EuphoniumClient;
+import folk.sisby.euphonium.helper.SoundHelper;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvent;
@@ -22,8 +23,8 @@ public class Beach implements ISoundType<BiomeSound> {
         (holder, key) -> key.equals(Biomes.BEACH) || key.equals(Biomes.STONY_SHORE);
 
     public Beach() {
-        DAY_SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.beach.day"));
-        NIGHT_SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.beach.night"));
+        DAY_SOUND = SoundHelper.sound(EuphoniumClient.id("biome.beach.day"));
+        NIGHT_SOUND = SoundHelper.sound(EuphoniumClient.id("biome.beach.night"));
     }
 
     @Override

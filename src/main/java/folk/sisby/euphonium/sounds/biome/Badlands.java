@@ -1,6 +1,7 @@
 package folk.sisby.euphonium.sounds.biome;
 
 import folk.sisby.euphonium.EuphoniumClient;
+import folk.sisby.euphonium.helper.SoundHelper;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvent;
@@ -22,8 +23,8 @@ public class Badlands implements ISoundType<BiomeSound> {
         holder -> holder.is(BiomeTags.IS_BADLANDS);
 
     public Badlands() {
-        DAY_SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.badlands.day"));
-        NIGHT_SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.badlands.night"));
+        DAY_SOUND = SoundHelper.sound(EuphoniumClient.id("biome.badlands.day"));
+        NIGHT_SOUND = SoundHelper.sound(EuphoniumClient.id("biome.badlands.night"));
     }
 
     @Override

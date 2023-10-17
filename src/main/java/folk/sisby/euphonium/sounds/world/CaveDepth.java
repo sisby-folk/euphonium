@@ -2,6 +2,7 @@ package folk.sisby.euphonium.sounds.world;
 
 import folk.sisby.euphonium.EuphoniumClient;
 import folk.sisby.euphonium.EuphoniumWorld;
+import folk.sisby.euphonium.helper.SoundHelper;
 import folk.sisby.euphonium.sound.ISoundType;
 import folk.sisby.euphonium.sound.LoopedWorldSound;
 import folk.sisby.euphonium.sound.SoundHandler;
@@ -14,7 +15,7 @@ public class CaveDepth implements ISoundType<WorldSound> {
     public static SoundEvent SOUND;
 
     public CaveDepth() {
-        SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("world.deep_cave"));
+        SOUND = SoundHelper.sound(EuphoniumClient.id("world.deep_cave"));
     }
 
     @Override

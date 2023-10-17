@@ -1,6 +1,7 @@
 package folk.sisby.euphonium.sounds.biome;
 
 import folk.sisby.euphonium.EuphoniumClient;
+import folk.sisby.euphonium.helper.SoundHelper;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalBiomeTags;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
@@ -22,8 +23,8 @@ public class Swamp implements ISoundType<BiomeSound> {
         holder -> holder.is(ConventionalBiomeTags.SWAMP);
 
     public Swamp() {
-        DAY_SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.swamp.day"));
-        NIGHT_SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.swamp.night"));
+        DAY_SOUND = SoundHelper.sound(EuphoniumClient.id("biome.swamp.day"));
+        NIGHT_SOUND = SoundHelper.sound(EuphoniumClient.id("biome.swamp.night"));
     }
 
     @Override

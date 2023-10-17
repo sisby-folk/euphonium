@@ -14,17 +14,17 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class WorldHelper {
     public static boolean isDay(Player player) {
-        long dayTime = player.level().getDayTime() % 24000;
+        long dayTime = player.level.getDayTime() % 24000;
         return dayTime >= 0 && dayTime < 12700;
     }
 
     public static boolean isNight(Player player) {
-        long dayTime = player.level().getDayTime() % 24000;
+        long dayTime = player.level.getDayTime() % 24000;
         return dayTime >= 12700;
     }
 
     public static boolean isThundering(Player player) {
-        return player.level().isThundering();
+        return player.level.isThundering();
     }
 
     public static boolean isOutside(Player player) {
@@ -35,28 +35,28 @@ public class WorldHelper {
 
         BlockPos playerPos = player.blockPosition();
 
-        if (player.level().canSeeSky(playerPos)) return true;
-        if (player.level().canSeeSkyFromBelowWater(playerPos)) return true;
+        if (player.level.canSeeSky(playerPos)) return true;
+        if (player.level.canSeeSkyFromBelowWater(playerPos)) return true;
 
         for (int i = start; i < start + blocks; i++) {
             BlockPos check = new BlockPos(playerPos.getX(), playerPos.getY() + i, playerPos.getZ());
-            BlockState state = player.level().getBlockState(check);
+            BlockState state = player.level.getBlockState(check);
             Block block = state.getBlock();
 
-            if (player.level().isEmptyBlock(check)) continue;
+            if (player.level.isEmptyBlock(check)) continue;
 
             if (!state.canOcclude()) continue;
 
-            if (player.level().canSeeSky(check)) return true;
-            if (player.level().canSeeSkyFromBelowWater(check)) return true;
+            if (player.level.canSeeSky(check)) return true;
+            if (player.level.canSeeSkyFromBelowWater(check)) return true;
             if (state.canOcclude()) return false;
         }
 
-        return player.level().canSeeSky(playerPos.above(blocks));
+        return player.level.canSeeSky(playerPos.above(blocks));
     }
 
     public static float distanceFromGround(Player player, int check) {
-        var level = player.level();
+        var level = player.level;
         var pos = player.blockPosition();
         var playerHeight = pos.getY();
 
@@ -78,7 +78,7 @@ public class WorldHelper {
     }
 
     public static boolean isBelowSeaLevel(Player player) {
-        return player.blockPosition().getY() < player.level().getSeaLevel();
+        return player.blockPosition().getY() < player.level.getSeaLevel();
     }
 
     public static double getDistanceSquared(BlockPos pos1, BlockPos pos2) {

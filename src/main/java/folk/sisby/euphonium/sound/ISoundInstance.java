@@ -6,7 +6,7 @@ import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
-import net.minecraft.core.registries.Registries;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.player.Player;
@@ -39,13 +39,13 @@ public interface ISoundInstance {
     default ResourceKey<Biome> getBiomeKey(BlockPos pos) {
         var biome = getBiome(pos);
         return getLevel().registryAccess()
-            .registryOrThrow(Registries.BIOME)
+            .registryOrThrow(Registry.BIOME_REGISTRY)
             .getResourceKey(biome)
             .orElse(null);
     }
 
     default Holder<Biome> getBiomeHolder(BlockPos pos) {
-        return getPlayer().level().getBiome(pos);
+        return getPlayer().level.getBiome(pos);
     }
 
     default Minecraft getMinecraft() {

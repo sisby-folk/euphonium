@@ -2,6 +2,7 @@ package folk.sisby.euphonium.sounds.world;
 
 import folk.sisby.euphonium.EuphoniumClient;
 import folk.sisby.euphonium.EuphoniumWorld;
+import folk.sisby.euphonium.helper.SoundHelper;
 import folk.sisby.euphonium.sound.ISoundType;
 import folk.sisby.euphonium.sound.LoopedWorldSound;
 import folk.sisby.euphonium.sound.SoundHandler;
@@ -14,7 +15,7 @@ public class CaveDrone implements ISoundType<WorldSound> {
     public static SoundEvent SOUND;
 
     public CaveDrone() {
-        SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("world.cave"));
+        SOUND = SoundHelper.sound(EuphoniumClient.id("world.cave"));
     }
 
     public void addSounds(SoundHandler<WorldSound> handler) {
@@ -30,7 +31,7 @@ public class CaveDrone implements ISoundType<WorldSound> {
                     return false;
                 }
 
-                if (!level.canSeeSkyFromBelowWater(pos) && pos.getY() <= player.level().getSeaLevel()) {
+                if (!level.canSeeSkyFromBelowWater(pos) && pos.getY() <= player.level.getSeaLevel()) {
                     return pos.getY() <= EuphoniumClient.CONFIG.worldAmbience.caveDroneDepth || light <= EuphoniumClient.CONFIG.worldAmbience.caveLightLevel;
                 }
 

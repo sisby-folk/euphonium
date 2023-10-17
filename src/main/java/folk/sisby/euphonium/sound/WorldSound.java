@@ -15,7 +15,7 @@ public abstract class WorldSound implements ISoundInstance {
     public WorldSound(Player player) {
         this.client = Minecraft.getInstance();
         this.player = player;
-        this.level = (ClientLevel) player.level();
+        this.level = (ClientLevel) player.level;
     }
 
     @Override
@@ -31,7 +31,7 @@ public abstract class WorldSound implements ISoundInstance {
     @Override
     public void updatePlayer(Player player) {
         this.player = player;
-        this.level = (ClientLevel) player.level();
+        this.level = (ClientLevel) player.level;
     }
 
     public abstract boolean isValidSituationCondition();

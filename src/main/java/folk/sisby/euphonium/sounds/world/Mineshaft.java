@@ -1,6 +1,7 @@
  package folk.sisby.euphonium.sounds.world;
 
  import folk.sisby.euphonium.EuphoniumClient;
+ import folk.sisby.euphonium.helper.SoundHelper;
  import folk.sisby.euphonium.sound.ISoundType;
  import folk.sisby.euphonium.sound.RepeatedWorldSound;
  import folk.sisby.euphonium.sound.SoundHandler;
@@ -16,7 +17,7 @@
      public static SoundEvent SOUND;
 
      public Mineshaft() {
-         SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("world.mineshaft"));
+         SOUND = SoundHelper.sound(EuphoniumClient.id("world.mineshaft"));
      }
 
      public void addSounds(SoundHandler<WorldSound> handler) {

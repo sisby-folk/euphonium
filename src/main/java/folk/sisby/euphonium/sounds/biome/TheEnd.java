@@ -1,6 +1,7 @@
 package folk.sisby.euphonium.sounds.biome;
 
 import folk.sisby.euphonium.EuphoniumClient;
+import folk.sisby.euphonium.helper.SoundHelper;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvent;
@@ -19,7 +20,7 @@ public class TheEnd implements ISoundType<BiomeSound> {
         holder -> holder.is(BiomeTags.IS_END);
 
     public TheEnd() {
-        SOUND = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.the_end"));
+        SOUND = SoundHelper.sound(EuphoniumClient.id("biome.the_end"));
     }
 
     @Override

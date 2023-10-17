@@ -1,6 +1,7 @@
 package folk.sisby.euphonium.sounds.biome;
 
 import folk.sisby.euphonium.EuphoniumClient;
+import folk.sisby.euphonium.helper.SoundHelper;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvent;
@@ -23,9 +24,9 @@ public class Caves implements ISoundType<BiomeSound> {
         holder -> holder.is(BiomeTags.IS_BEACH);
 
     public Caves() {
-        DEEP_DARK = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.caves.deep_dark"));
-        DRIPSTONE = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.caves.dripstone"));
-        LUSH = SoundEvent.createVariableRangeEvent(EuphoniumClient.id("biome.caves.lush"));
+        DEEP_DARK = SoundHelper.sound(EuphoniumClient.id("biome.caves.deep_dark"));
+        DRIPSTONE = SoundHelper.sound(EuphoniumClient.id("biome.caves.dripstone"));
+        LUSH = SoundHelper.sound(EuphoniumClient.id("biome.caves.lush"));
     }
 
     @Override
