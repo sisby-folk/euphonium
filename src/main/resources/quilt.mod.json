@@ -1,0 +1,40 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "folk.sisby",
+		"id": "euphonium",
+		"version": "${version}",
+		"metadata": {
+			"name": "Euphonium",
+			"description": "Calm ambient sounds suitable for vanilla minecraft - a reproducible fork of Charmonium",
+			"contributors": {
+				"Sisby folk": "Co-Authors"
+			},
+			"contact": {
+				"homepage": "https://modrinth.com/mod/euphonium",
+				"issues": "https://github.com/sisby-folk/euphonium/issues",
+				"sources": "https://github.com/sisby-folk/euphonium"
+			},
+			"icon": "assets/euphonium/icon.png"
+		},
+		"entrypoints": {
+			"client": [
+			]
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"depends": [
+			{
+				"id": "minecraft",
+				"versions": ">=${mc}"
+			},
+			{
+				"id": "quilt_loader",
+				"versions": ">=${ql}"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=${qfapi}"
+			}
+		]
+	}
+}

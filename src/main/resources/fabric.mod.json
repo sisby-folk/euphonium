@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "euphonium",
+  "version": "${version}",
+  "name": "Euphonium",
+  "description": "Calm ambient sounds suitable for vanilla minecraft - a reproducible fork of Charmonium",
+  "authors": [
+    "Sisby folk"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/euphonium",
+    "issues": "https://github.com/sisby-folk/euphonium/issues",
+    "sources": "https://github.com/sisby-folk/euphonium"
+  },
+  "license": "LGPL-3.0-only",
+  "icon": "assets/euphonium/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "minecraft": ">=${mc}",
+    "java": ">=17"
+  }
+}
