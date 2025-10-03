@@ -26,7 +26,7 @@ public abstract class BiomeSound implements ISoundInstance {
 	protected BiomeSound(PlayerEntity player) {
 		this.client = MinecraftClient.getInstance();
 		this.player = player;
-		this.level = (ClientWorld) player.getWorld();
+		this.level = (ClientWorld) player.getEntityWorld();
 	}
 
 	public abstract boolean isValidBiomeCondition(RegistryEntry<Biome> holder, RegistryKey<Biome> key);
@@ -34,7 +34,7 @@ public abstract class BiomeSound implements ISoundInstance {
 	@Override
 	public void updatePlayer(PlayerEntity player) {
 		this.player = player;
-		this.level = (ClientWorld) player.getWorld();
+		this.level = (ClientWorld) player.getEntityWorld();
 	}
 
 	@Override

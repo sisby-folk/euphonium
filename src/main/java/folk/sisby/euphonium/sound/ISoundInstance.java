@@ -39,13 +39,13 @@ public interface ISoundInstance {
 	default RegistryKey<Biome> getBiomeKey(BlockPos pos) {
 		var biome = getBiome(pos);
 		return getLevel().getRegistryManager()
-			.get(RegistryKeys.BIOME)
-			.getKey(biome)
+			.getOptional(RegistryKeys.BIOME)
+			.flatMap(registry -> registry.getKey(biome))
 			.orElse(null);
 	}
 
 	default RegistryEntry<Biome> getBiomeHolder(BlockPos pos) {
-		return getPlayer().getWorld().getBiome(pos);
+		return getPlayer().getEntityWorld().getBiome(pos);
 	}
 
 	default MinecraftClient getMinecraft() {
