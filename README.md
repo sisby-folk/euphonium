@@ -1,7 +1,7 @@
 <!--suppress HtmlDeprecatedTag, XmlDeprecatedElement -->
 
 <center>
-<img alt="a regular screenshot of a minecraft forest - what did you expect?" src="https://cdn.modrinth.com/data/XH8cnjHW/images/8d675995eb6af57465e360a1720063d004389b79.png"/>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/sxVLliizM3o" title="Charmonium/Euphonium Ambient Sounds Preview " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 Ambient sounds to fit vanilla.<br/>
 A backfork of <a href="https://modrinth.com/mod/charmonium">Charmonium</a>.<br/>
 Requires <a href="https://modrinth.com/mod/connector">Connector</a> and <a href="https://modrinth.com/mod/forgified-fabric-api">FFAPI</a> on (neo)forge.<br/>
@@ -27,6 +27,8 @@ This is a fork and backport of Charmonium 6.0 - an excellent rewrite of the mod 
 
 Charmonium 6.0 can't be reliably built from source. It's API, Charmony, is also not source-visible.<br/>
 To remedy this, Euphonium has all new buildscripts and forgoes Charmony, using [Kaleido](//github.com/sisby-folk/kaleido-config) for a toml config.
+
+We recommend combining this with [Presence Footsteps](https://modrinth.com/mod/presence-footsteps) for further foley depth.
 
 ## Afterword
 
