@@ -30,7 +30,7 @@ public class CaveDrone implements ISoundType<WorldSound> {
 					return false;
 				}
 
-				if (!level.isSkyVisibleAllowingSea(pos) && pos.getY() <= player.getWorld().getSeaLevel()) {
+				if (!level.isSkyVisibleAllowingSea(pos) && pos.getY() <= player.getEntityWorld().getSeaLevel()) {
 					return pos.getY() <= EuphoniumClient.CONFIG.worldAmbience.caveDroneDepth || light <= EuphoniumClient.CONFIG.worldAmbience.caveLightLevel;
 				}
 
