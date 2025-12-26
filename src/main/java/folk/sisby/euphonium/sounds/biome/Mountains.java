@@ -18,7 +18,9 @@ import java.util.function.Predicate;
 
 public class Mountains implements ISoundType<BiomeSound> {
 	public static final Predicate<RegistryEntry<Biome>> VALID_BIOME = holder -> holder.isIn(BiomeTags.IS_MOUNTAIN)
-		|| holder.isIn(ConventionalBiomeTags.MOUNTAIN);
+		|| holder.isIn(ConventionalBiomeTags.MOUNTAIN)
+		|| holder.isIn(BiomeTags.IS_HILL)
+		|| holder.isIn(ConventionalBiomeTags.EXTREME_HILLS);
 	public static SoundEvent DAY_SOUND;
 	public static SoundEvent NIGHT_SOUND;
 
